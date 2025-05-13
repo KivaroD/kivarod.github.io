@@ -1,0 +1,167 @@
+header h3 {
+    margin-top: 24px;
+    margin-left:  32px;
+}
+
+.time_worked{
+    position: relative;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    gap: 16px;
+}
+
+.time_worked_div{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    align-items: center;
+    border-width: 4px;
+    border-color: var(--success);
+    padding: 16px;
+    border-radius: 8px;
+    gap: 8px;
+    text-align: center;
+    max-height: 50%;
+}
+
+.time_worked_div img{
+    width: 32px;
+    height: auto;
+}
+
+#time_worked_text, #ex_worked_text{
+    font-weight: bold;
+    color: var(--black);
+}
+
+.time_worked_objective{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    border: solid;
+    border-width: 4px;
+    gap: 8px;
+    border-color: var(--primary);
+}
+
+.time_worked_objective_validated{
+    border: solid;
+    border-width: 4px;
+    gap: 8px;
+    border-color: var(--success);
+}
+
+.time_worked_objective img{
+    height: 32px;
+    width: 32px;
+}
+
+.time_worked_objective p{
+    font-weight: bold;
+}
+
+.commentary_section{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 24px;
+}
+
+#learning_commentary{
+    margin-top: 8px;
+    width: 80%;
+    height: 100px;
+    overflow-y: scroll;
+    background-color: var(--black_10);
+    border-radius: 8px;
+    padding: 16px;
+    color: var(--black);
+}
+
+.commentary_section{
+    position: relative;
+    margin-top: 32px;
+    margin-left: 24px;
+}
+
+#lessons_to_review_section{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lesson_to_review{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.lesson_to_review img{
+    padding: 8px;
+    width: 32px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lesson_review_text{
+    display: flex;
+    flex-direction: column;
+    gap : 8px;
+}
+
+.lesson_to_review_title *{
+    display: inline-block;
+}
+
+.lesson_to_review_title_lesson{
+    font-weight: bold;
+    color: var(--black);
+    margin-right: 8px;
+}
+
+.lesson_review_text .secondary_button{
+    background-color: var(--primary);
+    border: none;
+    font-family: 'Inter';
+    font-weight: bold;
+    padding: 8px ;
+    cursor: pointer;
+    width: 100px;
+}
+
+.lesson_to_review_medium{
+    background-color: #ff8c35;
+}
+
+.lesson_to_review_high{
+    background-color: #ff3737;
+}
+
+.lesson_to_review_low{
+    background-color: var(--success);
+}
+
+#statistic_graph_select{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 80px;
+    font-family: 'Inter';
+    background-color: var(--primary);
+    color: white;
+    margin-top: 8px;
+}
+
+#graph_div{
+    margin-top: 24px;
+    width: 90%;
+}

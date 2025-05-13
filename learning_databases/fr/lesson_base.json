@@ -1,0 +1,74 @@
+{   
+    "chapters" : [
+        "Introduction",
+        "Lettres"
+    ],
+    "lessons" : [
+        {
+            "chapter" : 0,
+            "level_range" : [0,1],
+            "preferences" : [0,1,2,3,4],
+            "lesson_title" : "Introduction",
+            "lesson_description" : "Cette première leçon s'attarde sur les particularités de la langue arabe. La leçon présente les spécificités de la lecture et de l'écriture de la langue tout en présentant les différentes thématiques qui vont être présentées dans la suite du parcours.",
+            "lesson_summary" : "Découvrez les bases de la langue ainsi que les notions qui seront travaillées dans le cours.",
+            "lesson_logo" : "/images/logos/mortarboard-fill.png",
+            "lesson_chapters" : [
+                {"name" : "Alphabet"},
+                {"name" : "Sens de lecture/écriture"},
+                {"name" : "Lettres"},
+                {"name" : "Lettres (2)"},
+                {"name" : "Apprentissage"}
+            ],
+            "lesson_exercices" : [
+            ]
+        },
+        {
+            "chapter" : 1,
+            "lesson_title" : "Bā",
+            "lesson_description" : "Cette première leçon s'attarde sur la lettre “Bā”, deuxième lettre de l’alphabet arabe et analogue du “b” de l’alphabet latin.",
+            "lesson_logo" : "/images/letters/ba.png",
+            "lesson_summary" : "Découvrez les bases de la langue ainsi que les notions qui seront travaillées dans le cours.",
+            "lesson_chapters" : [
+                {"name" : "Introduction", "level_range" : [0,1]},
+                {"name" : "Forme de la lettre", "level_range" : [0,1]},
+                {"name" : "Forme de la lettre (2)", "level_range" : [0,1]},
+                {"name" : "Prononciation", "level_range" : [0,1], "preferences" : [0,3,4]},
+                {"name" : "Prononciation (2)", "preferences" : [0,3,4]}, 
+                {"name" : "Ecriture", "preferences" : [1,3,4]}, 
+                {"name" : "Exemple", "level_range" : [0,1]}
+            ],
+            "lesson_exercices" : [
+                {"name" : "Prononciation", "panel_id" : 4, "required" : false, "type" : "Prononciation"},
+                {"name" : "Ecriture", "panel_id" : 5, "required" : false, "type" : "Ecriture"}
+
+            ]
+        },
+        {
+            "chapter" : 1,
+            "lesson_title" : "Bā (Entrainement)",
+            "lesson_description" : "Entrainez-vous à lire et à écrire la lettre ب.",
+            "lesson_logo" : "/images/logos/trophy-fill-white.png",
+            "lesson_summary" : "Entrainez-vous à lire et à écrire la lettre ب.",
+            "lesson_chapters" : [
+                {"name" : "Lettre"},
+                {"name" : "Lettre"},
+                {"name" : "Prononciation et écriture"},
+                {"name" : "Lettre"},
+                {"name" : "Prononciation et écriture"},
+                {"name" : "Prononciation", "preferences" : [0,3,4]},
+                {"name" : "Ecriture", "preferences" : [1,3,4]}
+            ],
+            "lesson_exercices" : [
+                {"name" : "Lettre", "panel_id" : 0, "required" : true, "type" : "Quizz"},
+                {"name" : "Position lettre", "panel_id" : 1, "required" : true, "type" : "Quizz"},
+                {"name" : "Prononciation et écriture", "panel_id" : 2, "required" : true, "type" : "Quizz"},
+                {"name" : "Position lettre (2)", "panel_id" : 3, "required" : true, "type" : "Quizz"},
+                {"name" : "Prononciation et écriture (2)", "panel_id" : 4, "required" : true, "type" : "Quizz"},
+                {"name" : "Prononciation", "panel_id" : 5, "required" : false, "type" : "Prononciation"},
+                {"name" : "Ecriture", "panel_id" : 6, "required" : false, "type" : "Ecriture"}
+            ],
+            "lesson_pages" : [
+            ]
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/lessons/lesson_homepage.css">
+    <link rel="stylesheet" href="/styles/lessons/1/lesson1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="/sw.js"></script>
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Leçon</title>
+</head>
+<body>
+    <div class="page_content">
+        <div class="no_underline" id="homebutton">
+            <img src="/images/logos/house-door-fill1.png"/>
+        </div>   
+        <center>
+            <h5 id="panel_title">___</h5>
+            <div class="panels">
+                <div id="panel0" class="hidden">
+                    <p>La lettre ب (Bā) est la <b>seconde lettre</b> de l’alphabet arabe. Cette lettre fait le <b>même son que la lettre “b”</b> de l’alphabet latin</p>
+                    <p class="small">(comme par exemple dans le mot “bateau”).</p>
+                    <h1>ب</h1>
+                    <div class="round_button speak_button">
+                        <img src="/images/logos/volume-up-fill1.png" audio_source="normal_letter">
+                    </div>
+                    <audio src="/audios/lessons/1/ba.mp3" id="normal_letter"></audio>
+                </div>
+                <div id="panel1" class="hidden">
+                    <p class="desc">En fonction de sa position dans le mot la lettre ب s’écrit de manière légèrement différente. </p>
+                    <div class="container">
+                        <div class="row">
+                            <h1>ب</h1>
+                            <p>Lettre isolée</p>
+                        </div>
+                        <div class="row">
+                            <h1>بـ</h1>
+                            <p>Lettre en début de mot</p>
+                        </div>
+                        <div class="row">
+                            <h1>ـبـ</h1>
+                            <p>Lettre en milieu de mot</p>
+                        </div>
+                        <div class="row">
+                            <h1>ـب</h1>
+                            <p>Lettre en fin de mot</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel2" class="hidden">
+                    <p>Attention</p>
+                    <p>En fonction de sa position dans un mot lettre ب a une <b>forme très proche</b> de celle lettres ت , ث et ي</p>
+                    <p class="small">(que nous verrons par la suite).</p>
+                    <p>La lettre  ب (Bā) se distingue par son <b>unique point en bas</b>.</p>
+                    <img src="/images/lessons/1/letter_point_position.png">
+                </div>
+                <div id="panel3" class="hidden">
+                    <div class="pronunciation_container">
+                        <h1>بـَـ</h1>
+                        <div class="round_button speak_button"><!-- TODO : replace audios with right songs -->
+                            <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_ba">
+                            <audio id="pronunciation_ba" src="/audios/lessons/1/ba.mp3"></audio>
+                        </div>
+                    </div>
+                    <div class="pronunciation_container">
+                        <h1>بـُـ</h1>
+                        <div class="round_button speak_button">
+                            <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_bo">
+                            <audio id="pronunciation_bo" src="/audios/lessons/1/bo.mp3"></audio>
+                        </div>
+                    </div>
+                    <div class="pronunciation_container">
+                        <h1>بـِـ</h1>
+                        <div class="round_button speak_button">
+                            <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_bi">
+                            <audio id="pronunciation_bi" src="/audios/lessons/1/bi.mp3"></audio>
+                        </div>
+                    </div>                    
+                </div>
+                <div id="panel4" class="hidden">
+                    <p>Entraînement</p>
+                    <p>Écoutez comment se prononce la lettre et entraînez-vous à répéter.</p>
+                    <p class="small_small">(Vous pouvez vous enregistrer et comparer les résultats à l’aide du bouton micro)</p>
+                    <div class="audio_example_container">
+                        <div class="audio_example_container_element">
+                            <h1>بـَ</h1>
+                            <div class="round_button speak_button">
+                                <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_ba">
+                            </div>
+                        </div>
+                        <div class="audio_example_container_element">
+                            <h1>بـُ</h1>
+                            <div class="round_button speak_button">
+                                <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_bo">
+                            </div>
+                        </div>
+                        <div class="audio_example_container_element">
+                            <h1>بـِ</h1>
+                            <div class="round_button speak_button">
+                                <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_bi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio_registering_container">
+                        <div class="round_button register_button" audio_player="pronunciation_audio_source">
+                            <img src="/images/logos/mic-fill1.png">
+                        </div>
+                        <div class="round_button speak_button disabled_button">
+                            <img src="/images/logos/volume-up-fill1.png" audio_source="pronunciation_audio_source">
+                            <audio id="pronunciation_audio_source" src=""></audio>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel5" class="hidden">
+                    <p class="panel_5_title2">Entrainement</p>
+                    <p class="panel_5_desc">Essayez de réécrire la lettre dans l’encadré prévu à cet effet.</p>
+                    <div class="letter_carroussel" carroussel_letters="ب,بـ,ـبـ,ـب">    <!-- TODO : adapter lettres à voyelles-->
+                        <p>&lt</p>
+                        <h1>ب</h1>
+                        <p>&gt</p>
+                    </div>
+                    <div class="write_area">
+                        <div class="eraze_write_button secondary_button">
+                            <p>Effacer</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel6" class="hidden">
+                    <h1>بـَـا ب</h1>
+                    <p>"baab"</p>
+                    <div class="round_button speak_button">
+                        <img src="/images/logos/volume-up-fill1.png" audio_source="audio_example">
+                        <audio id="audio_example" src="/audios/lessons/1/baab.mp3"></audio>
+                    </div>
+                    <p>(Porte)</p>
+                </div>
+            </div>
+            <div class="lesson_button_options">
+                <div class="secondary_button" id="previous_panel_button">
+                    <p class="small small">Précédent</p>
+                </div>
+                <p class="small" id="current_panel_pos">../..</p>
+                <div class="secondary_button" id="next_panel_button">
+                    <p class="small small">Suivant</p>
+                </div>
+            </div>
+        </center>
+    </div>
+    <script src="/scripts/lessons/lessons.js"></script>
+    <script src="/scripts/lessons/lesson_interactive_components.js"></script>
+</body>
+</html>

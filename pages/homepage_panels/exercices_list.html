@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/homepages/exercices_list.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <h3>Exercices</h3>
+    </header>
+    <div class="custom_training">
+        <h6>Entrainement<br/>personnalisé</h6>
+        <div class="custom_exercice_options_div">
+            <div class="custom_exercice_card">
+                <p>Réviser les leçons terminées</p>
+                <div class="custom_duration_div" value="10">
+                    <h5 class="no_underline">-</h5>
+                    <h6 class="no_underline">10mn</h6>
+                    <h5 class="no_underline">+</h5>
+                </div>
+                <div class="primary_button revise_button" id="revise_finished">
+                    <p>Réviser</p>
+                </div>
+            </div>
+            <div class="custom_exercice_card">
+                <p>Réviser ses difficultés</p>
+                <div class="custom_duration_div" value="10">
+                    <h5 class="no_underline">-</h5>
+                    <h6 class="no_underline">10mn</h6>
+                    <h5 class="no_underline">+</h5>
+                </div>
+                <div class="primary_button revise_button" id="revise_difficulties">
+                    <p>Réviser</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exercice">
+        <h6>Exercices</h6>
+        <div class="filter_div">
+            <div id="filter_div_header" class="no_underline" state="close">
+                <div class="filter_header_texts">
+                    <img src="/images/logos/filter-circle-fill 2.png">
+                    <p class="small">Filtrer les exercices</p>
+                </div>   
+                <p id="filter_header_arrow">></p> 
+            </div>
+            <div id="filter_div_options" class="hidden">
+                <div id="filter_ex_types_div">
+                </div>
+            </div>
+        </div>
+        <div id="exercice_by_lesson_div">
+        </div>
+    </div>
+    <footer>
+        <a href="/pages/homepage_panels/community.html" class="footer_option hidden_flex">
+            <img src="/images/logos/chat-fill 1.png">
+            <p>Communauté</p>
+        </a>
+        <a href="/pages/homepage_panels/progress.html" class="footer_option">
+            <img src="/images/logos/award-fill 1.png">
+            <p>Progrès</p>
+        </a>
+        <a href="/homepage.html" class="footer_option">
+            <img src="/images/logos/house-door-fill1.png">
+            <p>Menu</p>
+        </a>
+        <a href="/pages/homepage_panels/lessons_list.html" class="footer_option">
+            <img src="/images/logos/book-fill 1.png">
+            <p>Leçons</p>
+        </a>
+        <a href="/pages/homepage_panels/exercices_list.html" class="footer_option">
+            <img src="/images/logos/clipboard-check-fill 1.png">
+            <p>Révision</p>
+        </a>
+    </footer>
+    <script src="/scripts/homepages/exercices_list.js" defer></script>
+</body>

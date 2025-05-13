@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/welcome/welcome_styles.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Welcome</title>
+    <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+        });
+    </script>
+</head>
+<body>
+    <center>
+        <div class="page_content">
+            <h2>Bienvenue</h2>
+            <p>Nous sommes là pour vous accompagner dans l’apprentissage de l’arabe à l’aide de ses lessons interractives !<br/>Avec seulement quelques minutes de travail régulières vous maitriserez les bases de la lecture et de l’écriture.</p>
+            <!-- <div class="small">En utilisation l’application vous acceptez ses <a href="">conditions d’utilisation</a></div> -->
+            <div class="primary_button" id="begin_button">
+                <h6>Installer l'application</h6>
+            </div>
+            <div class="primary_button" id="online_version_button">
+                <h6>Utiliser la version en ligne</h6>
+            </div>
+        </div>
+        <div class="help_lang_button_container hidden_flex">
+            <div class="round_button" id="lang_button">
+                <img src="/images/flags/fr.png">
+            </div>
+            <div class="round_button" id="help_button">
+                <h4>?</h4>
+            </div>
+        </div>        
+        <div id="install_app_popup" class="hidden">
+            <h5>Installation non disponible</h5>
+            <p>L'installation est indisponible à patir de ce navigateur.<br/>Réessayez à partir d'un nouveau navigateur ou explorez librement l'application à partir de la version en ligne.</p>
+            <div class="primary_button" id="back_popup_button">
+                <h6>Retour</h6>
+            </div>
+            <div class="app_logo_div">
+            </div>
+            <div id="close_app_install_tutorial">
+                <h3>X</h3>
+            </div>
+        </div>
+    </center>
+    <script src="/scripts/welcome.js" defer></script>
+</body>
+</html>

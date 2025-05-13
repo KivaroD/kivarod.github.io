@@ -1,0 +1,76 @@
+header h3 {
+    margin-top: 24px;
+    margin-left:  16px;
+}
+
+.page_content{
+    margin-top: 24px;
+    margin-left:  16px; 
+}
+
+#message_filter_select{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 80px;
+    font-family: 'Inter';
+    background-color: var(--primary);
+    color: white;
+    margin-top: 8px;
+}
+
+#error_message{
+    margin-top: 16px;
+    margin-left: 8px;
+    color: var(--error);
+    width: 80%;
+}
+
+#title_input{
+    margin-top: 24px;
+    width: 300px;
+    display: block;
+    padding: 8px;
+}
+
+.page_content textarea{
+    margin-top: 16px;
+    width: 300px;
+    height: 130px;
+    overflow-y: scroll;
+    display: block;
+    resize: none;
+    padding: 8px;
+}
+
+.normal_textarea{
+    border: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: var(--primary);
+}
+
+.invalid_textarea{
+    border: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: rgb(201, 29, 29);
+}
+
+
+
+#write_message_button{
+    margin-top: 16px;
+    width: 100px;
+    margin-right: 16px;
+    margin-left: auto;
+    background-color: var(--primary);
+    border : none;
+    padding: 8px;
+}
+
+#write_message_button p{
+    color: white;
+    display: inline;
+    font-weight: bold;
+    font-style: normal;
+}

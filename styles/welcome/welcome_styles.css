@@ -1,0 +1,97 @@
+.page_content{
+    margin-top: 48px;
+    width: 75.3vw;
+}
+
+.page_content p {
+    margin-top: 32px;
+}
+
+.page_content .small {
+    margin-top: 64px;
+    font-style: italic;
+}
+
+.page_content .small a {
+    color: var(--black_75);
+}
+
+#begin_button{
+    margin-top: 32px;
+}
+
+#online_version_button{
+    margin-top: 16px;
+}
+
+#begin_button h6, #online_version_button h6{
+    color: white;
+}
+
+.help_lang_button_container{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    cursor: pointer;
+}
+
+#help_button h4{
+    color: white;
+}
+
+#lang_button img{
+ width: 40px; 
+ height: auto;  
+}
+
+#install_app_popup{
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    border: solid;
+    border-radius: 8px;
+    border-color: var(--primary);
+    border-width: 4px;
+    background-color: white;
+}
+
+#install_app_popup h5{
+    width: 70%;
+    margin-top: 40px;
+}
+
+#close_app_install_tutorial{
+    width: 60px;
+    height: 60px;
+    background-color: var(--error);
+    border-radius: 360px;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close_app_install_tutorial h3{
+    color: white;
+    font-weight: bold;
+}
+
+#install_app_popup p {
+    margin-top: 32px;
+    width: 80%;
+}
+
+#install_app_popup .primary_button{
+    margin-top: 32px;
+    display: inline-block;
+}
+
+#install_app_popup .primary_button h6{
+    color: white;
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Apprentissage arabe",
+    "short_name": "Arabic Learner",
+    "description": "Découvrez le monde de la langue arabe au travers de leçons intéractives.", 
+    "start_url": "/index.html?source=pwa",
+    "scope": "./",
+    "icons": [
+      {
+        "src": "/logo_app_192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/logo_app_512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+      "screenshots": [
+      {
+        "src": "/images/app_screenshots/screenshot1.png",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/app_screenshots/screenshot2.png",
+        "type": "image/png"
+      }, 
+      {
+        "src": "/images/app_screenshots/screenshot3.png",
+        "type": "image/png"
+      }
+    ],
+    "display": "standalone"
+  }
+  

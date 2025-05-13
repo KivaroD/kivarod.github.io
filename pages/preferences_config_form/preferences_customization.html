@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/welcome/preferences_customization.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Custom preferences</title>
+</head>
+<body>
+    <center>
+        <!-- Header -->
+        <div class="page_content">
+            <h4 id="title">Quel est votre niveau actuel ?</h4>
+            <p class="small hidden" id="mult_option_text">Plusieurs options sont sélectionnables</p>
+        </div>
+
+        <!-- Level -->
+         <div class="panel" id="panel0">
+            <div class="options_list">
+                <p class="choice_list_option small" value=0 panel=0>Je débute dans l’apprentissage</p>
+                <p class="choice_list_option small" value=1 panel=0>Je sais parler arabe et aimerais apprendre à lire ou écrire.</p>
+                <p class="choice_list_option small" value=2 panel=0>Je sais lire/écrire et j'aimerais m’améliorer</p>
+                <p class="choice_list_option small" value=3 panel=0>Autre</p>
+            </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="panel hidden" id="panel1">
+            <div class="options_list">
+                <p class="choice_list_option small" value=0 panel=1>Lire l’arabe</p>
+                <p class="choice_list_option small" value=1 panel=1>Ecrire l’arabe</p>
+                <p class="choice_list_option small" value=2 panel=1>En apprendre plus sur la langue</p>
+                <p class="choice_list_option small" value=3 panel=1>Consolider mes acquis</p>
+                <p class="choice_list_option small" value=4 panel=1>Autre</p>
+            </div>
+        </div>
+
+        <!-- Time per day-->
+        <div class="panel hidden" id="panel2">
+            <div class="hour_increment_ui">
+                <div class="increment_button no_underline" id="decrease_button">-</div>
+                <p id="increment_display" class="no_underline">10mn</p>
+                <div class="increment_button no_underline" id="increase_button">+</div>
+            </div>
+            <div class="predefined_duration_buttons_container">
+                <div class="column">
+                    <div class="round_button predefined_duration" value=5>
+                        <h6 value=5>5mn</h6>
+                    </div>
+                    <div class="round_button predefined_duration" value=20>
+                        <h6 value=20>20mn</h6>
+                    </div>    
+                </div>
+                <div class="column">
+                    <div class="round_button predefined_duration" value=15>
+                        <h6 value=15>15mn</h6>
+                    </div>
+                    <div class="round_button predefined_duration" value=30>
+                        <h6 value=30>30mn</h6>
+                    </div>   
+                </div> 
+            </div>
+        </div>
+
+        <!-- Command buttons -->
+        <p class="small_small" id="comment">Cette option pourra être modifiée par la suite</p>
+        <div class="help_lang_button_container">
+            <div class="round_button" id="back_button">
+                <img src="/images/logos/arrow-left-short.png">
+            </div>
+            <div class="secondary_button" id="next_button">
+                <p>Suivant</p>
+                <img src="/images/logos/arrow-left-short.png">
+            </div>
+        </div>
+    </center>
+
+    <script>
+        let panel = 0;
+        let preferences = {"current_level" : undefined, "objectives" : [], "time_per_day" : 10};
+        let pref_by_index = Object.keys(preferences);
+        let titles = ["Quel est votre niveau actuel ?", "Que souhaitez vous apprendre ?", "Combien de temps souhaiteriez vous travailler régulièrement ?"];
+
+        // Logic each panel.
+        let options = document.getElementsByClassName("choice_list_option")
+        for(let i=0; i<options.length; i++){
+            options[i].addEventListener("click", (event) => {
+                let option_panel_id = parseInt(event.target.getAttribute("panel"));
+                let selected_value = parseInt(event.target.getAttribute("value"));
+                
+                // Update of the preference in case of choice with unique value.
+                if(!Array.isArray(preferences[pref_by_index[option_panel_id]])){
+                    // Update of the preference.
+                    let previous_value = preferences[pref_by_index[option_panel_id]];
+                    preferences[pref_by_index[option_panel_id]] = selected_value;
+                    
+                    // Update of the border of the option selected.
+                    event.target.classList.add("selected_option");
+
+                    // Update of the border of the value previously selected.
+                    if(previous_value != undefined && previous_value != selected_value){
+                        let panel_list = document.getElementById("panel"+option_panel_id.toString()).children[0];
+                        panel_list.children[previous_value].classList.remove("selected_option"); 
+                    }
+                }
+                // Update of the preference in case of choice with multiple value.
+                else{
+                    let value_selected = parseInt(event.target.getAttribute("value"));
+                    if(!preferences[pref_by_index[option_panel_id]].includes(value_selected)){
+                        preferences[pref_by_index[option_panel_id]].push(value_selected);
+                        event.target.classList.add("selected_option");
+                    }
+                    else{
+                        let index = preferences[pref_by_index[option_panel_id]].indexOf(value_selected)
+                        preferences[pref_by_index[option_panel_id]].splice(index, 1); 
+                        event.target.classList.remove("selected_option");
+                    }
+                }
+            });
+        }
+        
+        // Next button.
+        document.getElementById("next_button").addEventListener("click", (event) => {
+            let current_panel_value = preferences[pref_by_index[panel]];
+            if(
+                (Array.isArray(current_panel_value) && current_panel_value.length == 0) || 
+                (!Array.isArray(current_panel_value) && current_panel_value == undefined)     
+            ){
+
+                alert("Select a value");
+            }
+            else{
+                if(panel + 1 >= pref_by_index.length){
+                    save_preferences();
+                }
+                else{
+                    document.getElementById("panel"+panel.toString()).classList.add("hidden")
+                    panel += 1;
+                    document.getElementById("panel"+panel.toString()).classList.remove("hidden")
+                    document.getElementById("title").innerText = titles[panel];
+                    if(Array.isArray(preferences[pref_by_index[panel]])){
+                        document.getElementById("mult_option_text").classList.remove("hidden");
+                    }
+                    else{
+                        document.getElementById("mult_option_text").classList.add("hidden");
+                    }
+                    if(pref_by_index[panel] == "time_per_day"){
+                        document.getElementById("comment").innerText = "Cette option n’engage en rien et pourra être modifiée par la suite";
+                    }
+                    else{
+                        document.getElementById("comment").innerText = "Cette option pourra être modifiée par la suite";
+                    }
+                }
+            }
+        });
+
+        // Previous button. 
+        document.getElementById("back_button").addEventListener("click", (event) => {
+            if(panel > 0){
+                panel -= 1; 
+                document.getElementById("panel"+(panel+1).toString()).classList.add("hidden");
+                document.getElementById("panel"+panel.toString()).classList.remove("hidden");
+                document.getElementById("title").innerText = titles[panel];
+                if(Array.isArray(preferences[pref_by_index[panel]])){
+                    document.getElementById("mult_option_text").classList.remove("hidden");
+                }
+                else{
+                    document.getElementById("mult_option_text").classList.add("hidden");
+                }
+            
+                if(pref_by_index[panel] == "time_per_day"){
+                    document.getElementById("comment").innerText = "Cette option n’engage en rien et pourra être modifiée par la suite";
+                }
+                else{
+                    document.getElementById("comment").innerText = "Cette option pourra être modifiée par la suite";
+                }
+            }
+            else if(confirm("Are you sure you want to leave learning path personalization ?")){
+                if(new URL(document.location.href).searchParams.get('source') == "pwa"){
+                    document.location.href = "/pages/preferences_config_form/welcome_pref_choice.html?source=pwa";
+                }
+                else{
+                    document.location.href = "/pages/preferences_config_form/welcome_pref_choice.html";
+                }
+            }
+        });
+
+        // Increment for learning duration preferences.
+        function set_minute_preferences(min){
+            preferences["time_per_day"] = Math.max(min,1);
+            document.getElementById("increment_display").innerText = preferences["time_per_day"].toString() + "mn";
+        }
+        document.getElementById("decrease_button").addEventListener("click", (event) => {
+            set_minute_preferences(preferences["time_per_day"]-1);
+        });
+        document.getElementById("increase_button").addEventListener("click", (event) => {
+            set_minute_preferences(preferences["time_per_day"]+1);
+        });
+        let predefined_duration_buttons = document.getElementsByClassName("predefined_duration");
+        for(let i=0; i<predefined_duration_buttons.length; i++){
+            predefined_duration_buttons[i].addEventListener("click", (event) => {
+                set_minute_preferences(event.target.getAttribute("value"));
+            });
+        }
+
+
+        function save_preferences(){
+            save_learning_preferences(preferences);
+            document.location.href = "/pages/preferences_config_form/config_finalization.html";
+        }
+    </script>
+</body>
+</html>

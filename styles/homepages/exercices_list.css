@@ -1,0 +1,175 @@
+header h3 {
+    margin-top: 24px;
+    margin-left:  16px;
+}
+
+.custom_training{
+    margin-left: 8px;
+    margin-top: 40px;
+}
+
+.custom_exercice_options_div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    width: 95vw;
+    gap: 16px;
+}
+
+.custom_exercice_card{
+    max-width: 30%;
+    border: solid;
+    border-color: var(--primary);
+    border-width: 4px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    gap: 8px;
+    height: 180;
+}
+
+.custom_duration_div{
+    display: flex;
+    flex-direction: row;
+    gap : 8px;
+}
+
+.custom_duration_div h5{
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.custom_duration_div h6{
+    color: var(--black_75);
+}
+
+.revise_button{
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.revise_button p {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+
+.exercice{
+    margin-top: 40px;
+    margin-left: 8px;
+}
+
+.filter_div{
+    padding: 0 8px;
+    background-color: var(--black_10);
+    width: 75%;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#filter_div_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#filter_header_arrow{
+    font-weight: bold;
+    margin-bottom: 2px;
+    transition: transform 0.2s;
+}
+
+.filter_header_arrow_rotated{
+    transform: rotate(90deg);
+}
+
+
+
+.filter_header_texts{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.filter_header_texts img{
+    width: 16px;
+    height: auto;
+}
+
+.filter_header_texts p{
+    text-decoration: underline;
+}
+
+#filter_ex_types_div{
+    margin-top: 8px;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.filter_ex_type_elem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 8px;
+    margin-right: 16px;
+}
+
+.filter_ex_type_elem input{
+    width: 16px;
+    height: 16px;
+    border : solid;
+    border-color : var(--black);
+    border-width: 2px;
+    border-radius: 1px;
+}
+
+.filter_ex_type_elem label{
+    font-style: normal;
+    color: var(--black);
+}
+
+#exercice_by_lesson_div{
+    margin-left: 8px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.exercices_lesson_header{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.exercices_lesson_header img{
+    background-color: var(--info);
+    width: 22px;
+    height: auto;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.lesson_exercices_list{
+    margin-top: 8px;
+}
+
+.lesson_element{
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 8px;
+
+}

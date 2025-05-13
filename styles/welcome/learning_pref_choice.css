@@ -1,0 +1,95 @@
+.page_content{
+    margin-top: 32px;
+    width: 75.3vw;
+}
+
+.page_content :nth-child(2) {
+    margin-top: 32px;
+}
+
+.page_content .small_small{
+    margin-top: 32px;
+    font-style: italic;
+}
+
+#personalize_button{
+    margin-top: 24px;
+}
+
+#personalize_button p{
+    color: white;
+    font-weight: bold;
+}
+
+#not_personalize_button{
+    margin-top: 24px;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#not_personalize_button p {
+    font-size: 12.5px;
+    color: white;
+    font-weight: bold;
+}
+
+
+#back_button{
+    background-color: var(--primary);
+}
+
+#back_button img{
+    width: 24px; 
+    height: auto;  
+}
+
+.help_lang_button_container{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+}
+
+#help_button h4{
+    color: white;
+}
+
+
+   
+/*
+.page_content .small a {
+    color: var(--black_75);
+}
+
+#begin_button{
+    margin-top: 32px;
+}
+
+#begin_button h5{
+    color: white;
+}
+
+.help_lang_button_container{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    cursor: pointer;
+}
+
+#help_button h4{
+    color: white;
+}
+
+#lang_button img{
+ width: 40px; 
+ height: auto;  
+}
+*/

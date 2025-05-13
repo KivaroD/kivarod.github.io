@@ -1,0 +1,39 @@
+.page_content{
+    margin-top: 40px;
+    width: 75.3vw;
+}
+
+.page_content p{
+    margin-top: 32px;
+}
+
+.page_content .primary_button{
+    margin-top: 40px;
+}
+
+.primary_button h5{
+    color: white;
+}
+
+#back_button{
+    background-color: var(--primary);
+}
+
+#back_button img{
+    width: 24px; 
+    height: auto;  
+}
+
+.help_lang_button_container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    cursor: pointer;
+}
+
+#help_button h4{
+    color: white;
+}
+

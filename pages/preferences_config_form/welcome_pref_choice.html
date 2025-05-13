@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/welcome/learning_pref_choice.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Learning preferences</title>
+</head>
+<body>
+    <center>
+        <div class="page_content">
+            <h4>Personnalisez votre parcours</h4>
+            <p>Afin d’offir un parcours d’apprentissage sur mesure, l’application vous laisse la possibilité de personnaliser vos préférences en quelques minutes.</p>
+            <p class="small_small">Les données saisies ne serviront qu’à améliorer le parcours d’apprentissages et aucune données ne sera stockées dans nos serveurs.</p>
+            <div class="primary_button" id="personalize_button">
+                <p>Personnaliser<br/>l’apprentissage</p>
+            </div>
+            <div class="secondary_button" id="not_personalize_button">
+                <p>Continuer sans <br/>personnaliser</p>
+            </div>
+        </div>
+        <div class="help_lang_button_container">
+            <div class="round_button" id="back_button">
+                <img src="/images/logos/arrow-left-short.png">
+            </div>
+            <div class="round_button" id="help_button">
+                <h4>?</h4>
+            </div>
+        </div>
+    </center>
+    <script defer>
+        const is_pwa = new URL(document.location.href).searchParams.get('source') == "pwa";
+        document.getElementById("back_button").addEventListener("click", () => {
+            if(is_pwa){
+                document.location.href="/index.html?source=pwa"
+            }
+            else{
+                document.location.href="/index.html"
+            }
+        });
+
+        document.getElementById("not_personalize_button").addEventListener("click", (event) => {
+            if(confirm("Êtes-vous sur(e) de ne pas vouloir personnaliser votre parcours d'apprentissage ?")){
+                save_learning_preferences({"current_level" : -1, "objectives" : [], "time_per_day" : 10});
+                document.location.href = "/pages/preferences_config_form/config_finalization.html";
+            }
+            else{
+                event.preventDefault();
+            }
+        });
+
+        document.getElementById("personalize_button").addEventListener("click", ()=> {
+            if(is_pwa){
+                document.location.href = "/pages/preferences_config_form/preferences_customization.html?source=pwa";
+            }
+            else{
+                document.location.href = "/pages/preferences_config_form/preferences_customization.html";
+            }
+        });
+    </script>
+</body>
+</html>

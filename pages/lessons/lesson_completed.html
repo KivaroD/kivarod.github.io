@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles/lessons/lesson_homepage.css">
+    <link rel="stylesheet" href="/styles/lessons/lesson_completed.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <script src="/sw.js"></script>
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Leçon</title>
+</head>
+<body>
+    <div class="page_content">
+        <div class="no_underline" id="homebutton">
+            <img src="/images/logos/house-door-fill1.png"/>
+        </div>   
+        <center>
+            <div class="lesson_description">
+                <img src="" id="lesson_logo" />
+                <h5 id="lesson_number_title">Leçon . :</h5>
+                <h5 id="lesson_title">"__________"</h5>
+                <h5 class="finish_text">Terminée</h5>
+                <h6 class="finish_text" id="exercice_note">Exercice note</h6>
+                <div id="revise_button" class="secondary_button hidden_flex">
+                    <p>Faire un exercice de<br/>validation</p>
+                </div>
+                <div id="next_lesson_button" class="secondary_button">
+                    <p>Leçon suivante</p>
+                </div><br/>
+                <div id="end_button" class="secondary_button">
+                    <p class="small">Retour</p>
+                </div>
+            </div>
+        </center>
+        <script src="/scripts/lessons/lesson_homepage.js"></script>
+        <script src="/scripts/lessons/lesson_completed.js"></script>
+    </div>
+</body>

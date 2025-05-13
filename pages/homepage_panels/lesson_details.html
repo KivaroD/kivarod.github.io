@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/homepages/lesson_details.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <center>
+            <div id="state_header">
+                <img src="/images/logos/info-circle-fill_blue.png">
+                <h6>Leçon non débutée</h6>
+            </div>
+        </center>
+        <div class="lesson_name_div">
+            <div id="lesson_logo_div">
+                <img id="lesson_logo" src="/images/logos/mortarboard-fill.png">
+            </div>
+            <div id="lesson_names_texts_div">
+                <h4>Chapitre .</h4>
+                <p>Leçon . : "___"</p>
+            </div>
+        </div>
+        <center>
+            <div class="secondary_button" id="start_lesson_button">
+                Démarrer
+            </div>
+        </center>
+    </header>
+    <div id="description">
+        <h6>Présentation</h6>
+        <p></p>
+    </div>
+    <div id="content">
+        <h6>Contenu</h6>
+        <div class="list_content_title">
+
+        </div>
+    </div>
+    <!-- TODO : images de meilleur qualité pour les logos -->
+    <a class="round_button" href="/pages/homepage_panels/lessons_list.html">
+        <img src="/images/logos/arrow-left-short.png">
+    </a>
+    <footer>
+        <a href="/pages/homepage_panels/community.html" class="footer_option hidden_flex">
+            <img src="/images/logos/chat-fill 1.png">
+            <p>Communauté</p>
+        </a>
+        <a href="/pages/homepage_panels/progress.html" class="footer_option">
+            <img src="/images/logos/award-fill 1.png">
+            <p>Progrès</p>
+        </a>
+        <a href="/homepage.html" class="footer_option">
+            <img src="/images/logos/house-door-fill1.png">
+            <p>Menu</p>
+        </a>
+        <a href="/pages/homepage_panels/lessons_list.html" class="footer_option">
+            <img src="/images/logos/book-fill 1.png">
+            <p>Leçons</p>
+        </a>
+        <a href="/pages/homepage_panels/exercices_list.html" class="footer_option">
+            <img src="/images/logos/clipboard-check-fill 1.png">
+            <p>Révision</p>
+        </a>
+    </footer>
+    <script src="/scripts/homepages/lesson_details.js" defer></script>
+</body>
+</html>

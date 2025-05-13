@@ -1,0 +1,44 @@
+header h3 {
+    margin-top: 24px;
+    margin-left:  32px;
+}
+
+#accordeons_container{
+    margin-top: 24px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap : 16px;
+}
+
+.accordeon_chapter{
+    background-color: var(--primary);
+    border-radius: 18px;
+}
+
+.accordeon_chapter_header{
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordeon_chapter_header p{
+    color: white;
+    font-weight: bold;
+}
+
+.accordeon_chapter_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+    padding: 8px 16px;
+    gap: 8px;
+    
+}
+
+.accordeon_chapter_content a {
+    color: white;
+    text-decoration: underline;
+}

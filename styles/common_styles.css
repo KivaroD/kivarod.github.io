@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.hidden_flex{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Colors */
+:root {
+    --primary: #FF6E00;
+    --secondary: #ED7D60;
+    --primary_dark : #50443b;
+    --info : #24A0C6;
+    --error : #EE5A55;
+    --dark_error : #ad231e;
+    --success : #09AC06;
+    --dark_success : #065d05;
+    --black : rgba(45, 43, 41, 1);
+    --black_75 : rgba(45, 43, 41, 0.75);
+    --black_50 : rgba(45, 43, 41, 0.5);
+    --black_25 : rgba(45, 43, 41, 0.25);
+    --black_10 : rgba(45, 43, 41, 0.10);
+    --gradient :  linear-gradient(135deg, rgba(255,110,0,1) 0%, rgba(237,125,96,1) 73%);
+}
+
+.no_underline{
+    -webkit-touch-callout: none;    /* iOS Safari */
+    -webkit-user-select: none;      /* Safari */
+    -khtml-user-select: none;       /* Konqueror HTML */
+    -moz-user-select: none;         /* Old versions of Firefox */
+    -ms-user-select: none;          /* Internet Explorer/Edge */
+    user-select: none;              /* Non-prefixed version */
+}
+
+
+
+/* Fonts */
+h1{
+    font-family: "Inter";
+    font-size: 53.75px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+h2{
+    font-family: "Inter";
+    font-size: 44.79px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+h3{
+    font-family: "Inter";
+    font-size: 37.32px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+h4{
+    font-family: "Inter";
+    font-size: 31.1px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+h5{
+    font-family: "Inter";
+    font-size: 25.92px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+h6{
+    font-family: "Inter";
+    font-size: 21.6px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+p{
+    font-family: "Inter";
+    font-size: 18px;
+    color: var(--black_75);
+}
+
+.small{
+    font-family: "Inter";
+    font-size: 15px;
+    color: var(--black_75);
+}
+
+.small_small{
+    font-family: "Inter";
+    font-size: 12.50px;
+    font-style: italic;
+    color: var(--black_75);
+}
+
+
+
+/* Buttons */
+.primary_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    color: white;
+    background: var(--gradient);
+    border-radius: 80px;
+    text-decoration: none;
+    width: auto;
+    gap: 16px;
+}
+
+.secondary_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    color: white;
+    background-color: rgba(80, 68, 59, 0.9);
+    border: solid;
+    border-width: 4px;
+    border-color: var(--primary_dark);
+    border-radius: 80px;
+    text-decoration: none;
+    width: auto;
+    gap: 16px;
+}
+
+.round_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width : 50px;
+    height: 50px;
+    border-radius : 80px;
+    padding: 8px; 
+    background-color: var(--secondary);
+}
+
+
+/* Inputs */
+select{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 80px;
+    font-family: 'Inter';
+    background-color: var(--primary);
+    color: white;
+    margin-top: 8px;
+}
+
+
+
+/* Footer */
+object{
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--primary_dark);
+    padding: 8px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer_option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer_option img{
+    width: 33px;
+    height: auto;
+}
+
+.footer_option p {
+    color: white;
+    font-family: "Inter";
+    font-size: 10px;
+    text-decoration: none;
+}
+
+
+
+/* Interactive element : Speek and record button */
+.speak_button, .register_button{
+    background-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    margin-top: 24px;
+}
+
+.speak_button img, .register_button img{
+    width: 32px;
+    height: 32px;
+}
+
+.disabled_button{
+    background-color: var(--black_75);
+}
+
+.register_button_recording{
+    animation-name: recording_animation;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes recording_animation {
+    0%{
+        background-color: var(--primary);
+    }
+    
+    50%{
+        background-color: var(--info);
+    }
+    
+    100%{
+        background-color: var(--primary);
+    }
+}
+
+
+/* Interactive element : letter carroussel */
+.letter_carroussel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter_carroussel p {
+    padding: 16px;
+    font-size: 56px;
+}
+
+.letter_carroussel h1{
+    width : 64px;
+}
+
+
+/* Interactive element : write area */
+.write_area{
+    position: relative;
+    width: 80%;
+    height: 130px;
+    border: solid;
+    border-color: var(--black_75);
+    border-radius: 8px;
+}
+
+.eraze_write_button{
+    display: inline;
+    padding: 4px 8px;
+    border :none;
+    background-color: var(--black);
+    position: absolute;
+    bottom: -16px;
+    left: 32.5%;
+    width: 35%;
+}
+
+.eraze_write_button p {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Interactive element : Letter quizz container */
+.letter_quiz_container{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.letter_quiz_container .awnser_row{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.letter_quiz_container .awnser_row .letter_option{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 40px;
+    height: 100px;
+    width: 100px;
+    gap: 16px;
+    color: var(--black);
+    transition: border-color 0.2s;
+}
+
+.option_selected{
+    border: solid;
+    border-radius: 4px;
+    border-color: var(--primary);
+}
+
+.option_not_selected{
+    border: solid;
+    border-radius: 4px;
+    border-color: var(--black);
+}
+
+.awnser_label{
+    font-weight: bold;
+}
+
+.right_awnser_text{
+    color: var(--dark_success);
+}
+
+.wrong_awnser_text{
+    color: var(--dark_error);
+}

@@ -1,0 +1,125 @@
+.page_content{
+    position: relative;
+    width: 85vw;
+    height: 90vh;
+    border: solid;
+    border-width: 4px;
+    border-color: var(--primary);
+    border-radius: 8px;
+    margin-left : 7.5vw;
+    margin-top: 5vh;
+}
+
+#homebutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 300px;
+    padding: 16px;
+    width: 32px;
+    height: 32px;
+    margin-left: -26px;
+    margin-top: -26px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#homebutton img{
+    width: 32px;
+    height: 32px;
+}
+
+#lesson_logo{
+    background-color: var(--primary);
+    width: 48px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#lesson_title{
+    margin-top: 16px;
+}
+
+#lesson_summary{
+    width: 83%;
+    margin-top: 24px;
+}
+
+.current_learning_stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap : 32px;
+    margin-top: 32px;
+}
+
+.stat_text{
+    max-width: 60px;
+}
+
+#nb_page_red{
+    font-weight: bold;
+    color: var(--dark);
+}
+
+#nb_ex_completed{
+    font-weight: bold;
+    color: var(--dark); 
+}
+
+#next_button{
+    display: inline-block;
+    padding: 16px 32px;
+    margin-top: 24px;
+}
+
+#next_button h6{
+    color: white;
+}
+
+#back_button{
+    display: inline-block;
+    border: none;
+    background-color: var(--primary);
+    padding: 8px 16px;
+    margin-top: 8px;
+}
+
+#back_button p{
+    font-weight: bold;
+    color: white;
+}
+
+.lesson_button_options{
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+#panel_title{
+    width: 85%;
+}
+
+#current_panel_pos{
+    font-weight: bold;
+    color: var(--dark);
+}
+
+#previous_panel_button, #next_panel_button{
+    border: none;
+    background-color: var(--primary);
+    padding: 8px;
+}
+
+#previous_panel_button p, #next_panel_button p {
+    color: white;
+    display: inline;
+    font-weight: bold;
+}

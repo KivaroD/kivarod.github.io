@@ -1,0 +1,134 @@
+#state_header{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    gap : 8px;
+    border-radius: 8px;
+    width: 80%;
+    padding: 16px;
+}
+
+.not_started{
+    border: solid;
+    border-width: 2px;
+    border-color: var(--info);
+}
+
+.finished{
+    border: solid;
+    border-width: 2px;
+    border-color: var(--success);
+}
+
+.blocked{
+    border: solid;
+    border-width: 2px;
+    border-color: var(--error);
+}
+
+.in_progress{
+    border: solid;
+    border-width: 2px;
+    border-color: var(--primary);
+}
+
+#state_header *{
+    font-weight: normal;
+}
+
+.lesson_name_div{
+    margin-top: 32px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+#lesson_logo_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#lesson_logo_div img{
+    width: 48px;
+    height: auto;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#lesson_names_texts_div{
+    display: flex;
+    flex-direction: column;
+    gap : 8px;
+}
+
+#lesson_names_texts_div p{
+    font-weight: bold;
+}
+
+.logo_not_started{
+    background-color: var(--info);
+}
+
+.logo_finished{
+    background-color: var(--success);
+}
+
+.logo_blocked{
+    background-color: var(--error);
+}
+
+.logo_in_progress{
+    background-color: var(--primary);
+}
+
+#start_lesson_button{
+    margin-top: 32px;
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+}
+
+#description{
+    width: 88%;
+    margin-left: 16px;
+    margin-top: 40px;
+}
+
+#content, #exercice_list{
+    margin-left: 16px;
+    margin-top: 32px;
+}
+
+.list_content_title{
+    display: flex;
+    flex-direction: column;
+    gap : 8px;
+}
+
+.content_list_element{
+    cursor: pointer;
+}
+.content_list_element_underline{
+    text-decoration: underline;
+}
+
+#exercice_list{
+    margin-bottom: 80px;
+}
+
+.round_button{
+    position: sticky;
+        left: 75%;
+        bottom: 5%;
+        width: 15%;
+    background-color: var(--primary);
+}
+
+.round_button img{
+    width: 85%;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/homepages/progress.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <h3>Progrès</h3>
+    </header>
+    <div class="time_worked">
+        <div class="time_worked_div">
+            <img src="/images/logos/trophy-fill 1.png">
+            <p id="time_worked_text">__mn</p>
+            <p class="small">travaillées cette semaine</p>
+        </div>
+        <div class="time_worked_div">
+            <img src="/images/logos/trophy-fill 1.png">
+            <p id="ex_worked_text">__</p>
+            <p class="small">exercices terminés cette semaine</p>
+        </div>
+    </div>
+    <div class="time_worked_objective">
+        <img src="/images/logos/hourglass-split1.png">
+        <p id="daily_objective">Objectif du jour : .../...</p>
+    </div>
+    <div class="commentary_section hidden">
+        <h5>Commentaire</h5>
+        <p id="learning_commentary" class="small">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.
+        </p>
+    </div>
+    <div class="commentary_section">
+        <h5>A revoir</h5>
+        <div id="lessons_to_review_section">
+        </div>
+    </div>
+    <div class="commentary_section">
+        <h5>Suivi</h5>
+        <select id="statistic_graph_select">
+            <option value="nb_lessons">Nombre de leçons validées</option>
+            <option value="nb_exs">Nombre d'exercices validés</option>
+            <option value="learning_time">Temps d'apprentissage</option>
+        </select>
+        <div id="graph_div">
+            <canvas id="graph"></canvas>
+        </div>
+    </div>
+    <footer>
+        <a href="/pages/homepage_panels/community.html" class="footer_option hidden_flex">
+            <img src="/images/logos/chat-fill 1.png">
+            <p>Communauté</p>
+        </a>
+        <a href="/pages/homepage_panels/progress.html" class="footer_option">
+            <img src="/images/logos/award-fill 1.png">
+            <p>Progrès</p>
+        </a>
+        <a href="/homepage.html" class="footer_option">
+            <img src="/images/logos/house-door-fill1.png">
+            <p>Menu</p>
+        </a>
+        <a href="/pages/homepage_panels/lessons_list.html" class="footer_option">
+            <img src="/images/logos/book-fill 1.png">
+            <p>Leçons</p>
+        </a>
+        <a href="/pages/homepage_panels/exercices_list.html" class="footer_option">
+            <img src="/images/logos/clipboard-check-fill 1.png">
+            <p>Révision</p>
+        </a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/scripts/homepages/progress.js" defer></script>
+</body>
+</html>

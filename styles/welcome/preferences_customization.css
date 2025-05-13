@@ -1,0 +1,126 @@
+.page_content{
+    margin-top: 32px;
+    width: 75.3vw;
+}
+
+.page_content h4 {
+    margin-top: 48px;
+}
+
+#title{
+    width: 72vw;
+}
+
+#mult_option_text {
+    margin-top: 16px;
+}
+
+.panel{
+    margin-top: 32px;
+}
+
+.options_list{
+    display: flex;
+    flex-direction: column;
+    gap : 8px;
+    width: 83vw;
+}
+
+.choice_list_option{
+    padding: 12px 16px;
+    border: solid;
+    border-width: 2px;
+    border-color: var(--primary_dark);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.selected_option{
+    border-color: var(--primary);
+}
+
+.hour_increment_ui{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.increment_button{
+    font-size: 38px;
+    font-family: "Inter";
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 16px;
+}
+
+#increment_display{
+    text-decoration: underline;
+    color: var(--black_75);
+    font-size: 38px;
+}
+
+.predefined_duration_buttons_container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 16px;
+    cursor: pointer;
+}
+
+.predefined_duration_buttons_container .column{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.predefined_duration{
+    background-color: var(--primary);
+    border: none;
+    padding: 8px 16px;
+}
+
+.predefined_duration h6{
+    color: white;
+}
+
+#comment{
+    margin-top: 32px;
+}
+
+.help_lang_button_container{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    cursor: pointer;
+
+}
+
+#back_button{
+    background-color: var(--primary);
+}
+
+#back_button h4{
+    color: white;
+}
+
+#next_button{
+    background-color: var(--primary);
+    border-width: 0;
+}
+#next_button p{
+    color: white;
+    font-weight: bold;
+}
+
+#next_button img{
+    transform: rotate(180deg);
+}

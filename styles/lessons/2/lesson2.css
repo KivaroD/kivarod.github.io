@@ -1,0 +1,65 @@
+.question{
+    margin-top: 40px;
+    width: 80%;
+}
+
+#panel0 .letter_quiz_container, #panel1 .letter_quiz_container{
+    margin-top: 24px;
+}
+
+.validate_quizz_panel{
+    margin-top: 24px;
+    display: inline-block;
+}
+
+.validate_quizz_panel h6{
+    color: white;
+}
+
+#panel0_awnser_display, #panel1_awnser_display{
+    margin-top: 16px;
+}
+
+#panel2 .letter_quiz_container, #panel3 .letter_quiz_container, #panel4 .letter_quiz_container, #panel3 .letter_quiz_container{
+    margin-top: 24px;
+}
+
+#panel2 .letter_quiz_container .awnser_row .letter_option, #panel4 .letter_quiz_container .awnser_row .letter_option{
+    width: 60px;
+    height: 60px;
+}
+
+.inputs_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+#panel2_resp_display, #panel3_awnser_display,  #panel4_resp_display{
+    margin-top: 24px;
+}
+
+#panel5 .small_small{
+    margin-top: 16px;
+    width: 70%;
+}
+
+.audio_rec_options_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+}
+
+#panel6 .write_area{
+    margin-top: 40px;
+    height: 200px;
+}
+
+#validate_quizz_panel6{
+    margin-top: 40px;
+}

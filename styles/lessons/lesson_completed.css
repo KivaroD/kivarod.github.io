@@ -1,0 +1,42 @@
+.page_content{
+    border-color: var(--success);
+}
+
+#homebutton{
+    background-color: var(--success);
+}
+
+#lesson_logo{
+    background-color: var(--success);
+}
+
+#lesson_logo{
+    margin-top: 64px;
+    width: 64px;
+    height: auto;
+    padding: 16px;
+}
+
+.finish_text{
+    font-weight: normal;
+    margin-top : 16px;
+}
+
+#revise_button, #next_lesson_button, #end_button{
+    border: none;
+    background-color: var(--success);
+    padding: 16px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+#revise_button p, #next_lesson_button p, #end_button p{
+    color: white;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+#next_lesson_button, #end_button{
+    margin-top: 12px;
+}

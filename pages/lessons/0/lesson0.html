@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/lessons/lesson_homepage.css">
+    <link rel="stylesheet" href="/styles/lessons/0/lesson0.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="/sw.js"></script>
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Leçon</title>
+</head>
+<body>
+    <div class="page_content">
+        <div class="no_underline" id="homebutton">
+            <img src="/images/logos/house-door-fill1.png"/>
+        </div>   
+        <center>
+            <h5 id="panel_title">___</h5>
+            <div class="panels">
+                <div id="panel0" class="hidden">
+                    <img src="/images/lessons/0/alphabet_list.png"/>
+                    <p>L’alphabet arabe est composé de <b>29 lettres</b>. Ces lettres font intervenir certains sons que l’on retrouve dans la langue française mais aussi <b>de nouveaux sons</b>.</p>
+                </div>
+                <div id="panel1" class="hidden">
+                    <img src="/images/lessons/0/reading_direction.png">
+                    <p>La lecture et l’écriture des lettres se font de <b>droite à gauche</b>.</p>
+                    <p class="small">Même si lire de droite à gauche peut faire peur à première abord, le sens de lecture deviendra logique une fois les lettres connues.</p>
+                </div>
+                <div id="panel2" class="hidden">
+                    <p>En fonction de sa position dans un mot, <b>la forme d’une même lettre varie</b>.</p>
+                    <p class="small">Exemple avec la lettre “Kāf” </p>
+                    <img src="/images/lessons/0/letter_change.png">
+                </div>
+                <div id="panel3" class="hidden">
+                    <div class="letters_ex_div">
+                        <h1>ث</h1>
+                        <h1>ت</h1>
+                        <h1>ب</h1>
+                    </div>
+                    <p>Certaines lettres ont des formes similaires mais se distinguent par exemple par <b>les points</b> que l’on retrouve.</p>
+                </div>
+                <div id="panel4" class="hidden">
+                    <p>Pour apprendre à lire/écrire l’arabe nous commencerons par <b>étudier chacune des lettres de l’alphabet</b> en <b>commençant par celles dont le son est similaire à l’alphabet français</b> (plutôt que d’étudier les lettres dans l’ordre alphabétique).</p>
+                </div>
+            </div>
+            <div class="lesson_button_options">
+                <div class="secondary_button" id="previous_panel_button">
+                    <p class="small small">Précédent</p>
+                </div>
+                <p class="small" id="current_panel_pos">../..</p>
+                <div class="secondary_button" id="next_panel_button">
+                    <p class="small small">Suivant</p>
+                </div>
+            </div>
+        </center>
+    </div>
+    <script src="/scripts/lessons/lessons.js"></script>
+</body>
+</html>

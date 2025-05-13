@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <link rel="stylesheet" href="/styles/homepages/write_message.css">
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_message_db.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <h3>Communauté</h3>
+    </header>
+    <div class="page_content">
+        <h6>Discussions</h6>
+        <select id="message_filter_select">
+            <option value="all">Thème</option>
+            <option value="type 1">Type 1</option>
+            <option value="type 2">Type 2</option>
+        </select>
+        <p class="small hidden" id="error_message">Message vide.</p>
+        <input type="text" id="title_input" class="normal_textarea small_small" placeholder="Titre">
+        <textarea placeholder="message" class="normal_textarea small_small" id="new_message"></textarea>
+    </div>
+    <div class="secondary_button" id="write_message_button" href="/homepage_panels/write_message.html">
+        <p class="small_small">Envoyer</p>
+        <img src="/images/logos/pencil-fill 1.png">
+    </div>
+    <footer>
+        <a href="/pages/homepage_panels/community.html" class="footer_option hidden_flex">
+            <img src="/images/logos/chat-fill 1.png">
+            <p>Communauté</p>
+        </a>
+        <a href="/pages/homepage_panels/progress.html" class="footer_option">
+            <img src="/images/logos/award-fill 1.png">
+            <p>Progrès</p>
+        </a>
+        <a href="/homepage.html" class="footer_option">
+            <img src="/images/logos/house-door-fill1.png">
+            <p>Menu</p>
+        </a>
+        <a href="/pages/homepage_panels/lessons_list.html" class="footer_option">
+            <img src="/images/logos/book-fill 1.png">
+            <p>Leçons</p>
+        </a>
+        <a href="/pages/homepage_panels/exercices_list.html" class="footer_option">
+            <img src="/images/logos/clipboard-check-fill 1.png">
+            <p>Révision</p>
+        </a>
+    </footer>
+    <script src="/scripts/homepages/write_message.js" defer></script>
+</body>
+</html>

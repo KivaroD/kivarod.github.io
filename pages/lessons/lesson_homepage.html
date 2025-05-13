@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles/lessons/lesson_homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common_styles.css">
+    <script src="/sw.js"></script>
+    <script src="/scripts/interract_with_preferences.js"></script>
+    <script src="/scripts/interract_with_learning_database.js"></script>
+    <script src="/scripts/online_offline_management.js" defer></script>
+    <title>Leçon</title>
+</head>
+<body>
+    <div class="page_content">
+        <div class="no_underline" id="homebutton">
+            <img src="/images/logos/house-door-fill1.png"/>
+        </div>   
+        <center>
+            <div class="lesson_description">
+                <img src="" id="lesson_logo" />
+                <h5 id="lesson_title">"__________"</h5>
+                <p id="lesson_summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat.                </p>
+                <div class="current_learning_stats">
+                    <div class="part_red stat_text">
+                        <p class="small" id="nb_page_red">./.</p>
+                        <p class="small_small">parties lues</p>
+                    </div>
+                    <div class="ex_completed stat_text">
+                        <p class="small" id="nb_ex_completed">./.</p>
+                        <p class="small_small">exercice(s) complété(s)</p>
+                    </div>
+                </div>
+                <div class="primary_button" id="next_button">
+                    <h6 id="next_button_text">...</h6>
+                </div>
+                <br/>
+                <div class="secondary_button" id="back_button">
+                    <p>Retour</p>
+                </div>
+            </div> 
+        </center>
+    </div>
+    <script src="/scripts/lessons/lesson_homepage.js" defer></script>
+</body>
+</html>
