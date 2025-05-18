@@ -124,7 +124,7 @@
 .round_button{
     position: sticky;
         left: 75%;
-        bottom: 5%;
+        bottom: 8%;
         width: 15%;
     background-color: var(--primary);
 }

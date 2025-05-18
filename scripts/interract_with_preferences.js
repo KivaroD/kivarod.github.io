@@ -439,7 +439,6 @@ function add_lesson_completed_today(lesson_id, time_spent, skipped){
 }
 
 function get_new_lessons_completed(only_new_lesson){
-    // TODO compte nouvelles leçons complétées (warning ne pas compter skips)
     const learning_stats = get_statistics()["lessons_history"];
     
     let lessons_per_day = {};

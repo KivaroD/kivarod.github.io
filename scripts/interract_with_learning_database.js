@@ -17,9 +17,6 @@ async function get_lessons(customize_with_learning_preferences){
 }
 
 function is_panel_to_skip(lesson_data, panel_id, learning_prefs){
-    // TODO : skip depending on current level.
-
-    // {"name": '...', "level_range": [0, 5], "preferences" : [...]}
     if(
         learning_prefs["current_level"] != -1 &&
         Object.keys(lesson_data["lesson_chapters"][panel_id]).includes("level_range") &&

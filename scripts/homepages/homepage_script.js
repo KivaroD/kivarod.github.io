@@ -58,7 +58,6 @@ function customize_homepage(current_lesson_data){
                 document.getElementById("next_lesson_button").addEventListener("click", (event) => next_lesson_button_func(true, lesson_id));
             }
             else{
-                // TODO : delete game object instead of hidding it.
                 document.getElementById("next_lesson_button").parentNode.removeChild(document.getElementById("next_lesson_button"));
             }
 
@@ -78,7 +77,7 @@ function customize_homepage(current_lesson_data){
             document.getElementById("lesson_name").innerText = "à venir";
         }
         else{
-            alert("Error in the data.");
+            // alert("Error in the data.");
         }
     })
 }
@@ -95,7 +94,7 @@ document.getElementById("details_button").addEventListener("click", (event) => {
 });
 
 function next_lesson_button_func(display_confirm, lesson_id){
-    if(!display_confirm || confirm("Sure ?")){  // TODO : message de confirmation.
+    if(!display_confirm || confirm("Êtes-vous sûr(e) de vouloir passer la leçon en cours ?")){
         add_lesson_completed_today(lesson_id, -1, true);
         curr_lesson_data["current_lesson_id"] = lesson_id + 1;
         curr_lesson_data["current_page_id"] = -1;

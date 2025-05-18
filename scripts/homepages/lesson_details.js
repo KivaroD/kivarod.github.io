@@ -63,7 +63,6 @@ function customize_lessons(data, lesson_id){
     document.getElementById("description").children[1].innerText = current_lesson_data["lesson_description"];
 
     // Content.
-    // TODO : a adapter avec préférences (enlever éléments, ajouter éléments).
     let content_list_div = document.getElementById("content").children[1];
     for(let i=0; i<current_lesson_data["lesson_chapters"].length; i++){
         let content_element = document.createElement("p");
@@ -109,7 +108,7 @@ function start_lesson_button(lesson){
     }
     // Lesson locked.
     else{
-        alert("Leçon non débloquée.");      // TODO : message ?
+        alert("Leçon non débloquée.");
         learning_state_header_text = "Bloqué";
     }
 }

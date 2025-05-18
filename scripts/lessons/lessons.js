@@ -154,7 +154,7 @@ function validate_panel_exercice(){
 function next_panel(){
     // If the panel has a required exercice but not validated.
     if(Object.keys(lesson_panels_with_grade).includes(current_panel_id.toString()) && lesson_panels_with_grade[current_panel_id] != -1 && !was_exercice_completed(lesson_id, lesson_panels_with_grade[current_panel_id])){
-        alert("Validate exercice first");
+        alert("Valider l'exercice pour pouvoir passer à la suite.");
         return;
     }
     

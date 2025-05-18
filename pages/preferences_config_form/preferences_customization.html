@@ -134,7 +134,7 @@
                 (!Array.isArray(current_panel_value) && current_panel_value == undefined)     
             ){
 
-                alert("Select a value");
+                alert("Merci de selectionner une ou plusieurs valeur(s).");
             }
             else{
                 if(panel + 1 >= pref_by_index.length){
@@ -182,7 +182,7 @@
                     document.getElementById("comment").innerText = "Cette option pourra être modifiée par la suite";
                 }
             }
-            else if(confirm("Are you sure you want to leave learning path personalization ?")){
+            else if(confirm("Êtes-vous sûr(e) de vouloir quitter la personnalisation ?")){
                 if(new URL(document.location.href).searchParams.get('source') == "pwa"){
                     document.location.href = "/pages/preferences_config_form/welcome_pref_choice.html?source=pwa";
                 }

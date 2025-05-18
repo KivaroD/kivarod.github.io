@@ -79,7 +79,6 @@ function calculate_lessons_to_review(lessons_data){
 }
 
 function display_lessons_to_review(lessons_data,lessons_to_review){
-    // TODO : message si rien à réviser.
     const keys = Object.keys(lessons_to_review);
     if(keys.length == 0){
         let no_review_text = document.createElement("a");
@@ -96,7 +95,6 @@ function display_lessons_to_review(lessons_data,lessons_to_review){
         let lesson_to_review_div = document.createElement("div");
         
         // Logo.
-        // TODO : couleur logo en fonction "urgence".
         let lesson_image = document.createElement("img");
         lesson_image.src = lesson["lesson_logo"];
         lesson_to_review_div.appendChild(lesson_image);
@@ -164,7 +162,6 @@ get_lessons().then((data) => {
 
 
 // Graph.
-// TODO : statistiques connectées aux données.
 function update_graph_content(content_type){
     // Getting of data.
     const fetched_data = get_data_graph(content_type);
