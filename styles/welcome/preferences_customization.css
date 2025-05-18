@@ -108,6 +108,12 @@
     background-color: var(--primary);
 }
 
+#back_button img{
+    width: 32px;
+    height: auto;
+}
+
+
 #back_button h4{
     color: white;
 }
@@ -123,4 +129,6 @@
 
 #next_button img{
     transform: rotate(180deg);
+    width: 32px;
+    height: auto;
 }

@@ -143,6 +143,7 @@ header h3 {
 #exercice_by_lesson_div{
     margin-left: 8px;
     margin-top: 24px;
+    margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     gap: 32px;
