@@ -34,7 +34,6 @@
                 {"name" : "Forme de la lettre (2)", "level_range" : [0,1]},
                 {"name" : "Prononciation", "level_range" : [0,1], "preferences" : [0,3,4]},
                 {"name" : "Prononciation (2)", "preferences" : [0,3,4]}, 
-                {"name" : "Ecriture", "preferences" : [1,3,4]}, 
                 {"name" : "Exemple", "level_range" : [0,1]}
             ],
             "lesson_exercices" : [
@@ -55,8 +54,7 @@
                 {"name" : "Prononciation et écriture"},
                 {"name" : "Lettre"},
                 {"name" : "Prononciation et écriture"},
-                {"name" : "Prononciation", "preferences" : [0,3,4]},
-                {"name" : "Ecriture", "preferences" : [1,3,4]}
+                {"name" : "Prononciation", "preferences" : [0,3,4]}
             ],
             "lesson_exercices" : [
                 {"name" : "Lettre", "panel_id" : 0, "required" : true, "type" : "Quizz"},
@@ -64,8 +62,7 @@
                 {"name" : "Prononciation et écriture", "panel_id" : 2, "required" : true, "type" : "Quizz"},
                 {"name" : "Position lettre (2)", "panel_id" : 3, "required" : true, "type" : "Quizz"},
                 {"name" : "Prononciation et écriture (2)", "panel_id" : 4, "required" : true, "type" : "Quizz"},
-                {"name" : "Prononciation", "panel_id" : 5, "required" : false, "type" : "Prononciation"},
-                {"name" : "Ecriture", "panel_id" : 6, "required" : false, "type" : "Ecriture"}
+                {"name" : "Prononciation", "panel_id" : 5, "required" : false, "type" : "Prononciation"}
             ],
             "lesson_pages" : [
             ]
